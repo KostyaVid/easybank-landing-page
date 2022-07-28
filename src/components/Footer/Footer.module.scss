@@ -1,0 +1,85 @@
+.footer {
+  flex: 0 0 190px;
+  margin-top: 120px;
+  background-color: var(--DarkBlue);
+  @media (max-width: 768px) {
+    flex: 0 0 auto;
+  }
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    padding-top: 25px;
+  }
+}
+
+.request {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: block;
+  }
+}
+
+.rights {
+  font-size: 15px;
+  margin-top: 25px;
+}
+
+.linksSoc {
+  margin-top: 55px;
+  @media (max-width: 768px) {
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+}
+
+.linksSoc .linkSoc + .linkSoc {
+  margin-left: 12px;
+}
+
+.linkSoc {
+  cursor: pointer;
+  &:hover {
+    path {
+      fill: var(--LimeGreen);
+    }
+  }
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 120px;
+  @media (max-width: 992px) {
+    gap: 50px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.nav li + li {
+  margin-top: 20px;
+}
+
+.nav li a {
+  color: var(--VeryLightGray);
+  &:hover {
+    color: var(--LimeGreen);
+  }
+}

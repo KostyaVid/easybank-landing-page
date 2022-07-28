@@ -1,0 +1,81 @@
+.nav {
+  @media (max-width: 768px) {
+    position: fixed;
+    left: 120%;
+    top: 100px;
+    width: 90%;
+    background-color: var(--VeryLightGray);
+    transition: all 0.3s ease;
+
+    border-radius: 4px;
+    z-index: 99;
+    // -webkit-box-shadow: 0px 32px 100px 100px rgba(45, 49, 77, 0.33);
+    // -moz-box-shadow: 0px 32px 100px 100px rgba(45, 49, 77, 0.33);
+    // box-shadow: 0px 32px 100px 100px rgba(45, 49, 77, 0.33);
+  }
+}
+
+.activeMenuMobile {
+  @media (max-width: 768px) {
+    left: 5%;
+    animation: boxShadow;
+    animation-duration: 0.1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes boxShadow {
+  from {
+    -webkit-box-shadow: 0px 89px 100px 100px rgba(45, 49, 77, 0);
+    -moz-box-shadow: 0px 89px 100px 100px rgba(45, 49, 77, 0);
+    box-shadow: 0px 89px 100px 100px rgba(45, 49, 77, 0);
+  }
+  to {
+    -webkit-box-shadow: 0px 89px 100px 100px rgba(45, 49, 77, 0.33);
+    -moz-box-shadow: 0px 89px 100px 100px rgba(45, 49, 77, 0.33);
+    box-shadow: 0px 89px 100px 100px rgba(45, 49, 77, 0.33);
+  }
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 35px 0;
+  }
+}
+
+.items .item + .item {
+  margin-left: 30px;
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 25px;
+  }
+}
+.item {
+  cursor: pointer;
+  @media (max-width: 768px) {
+    color: var(--DarkBlue);
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  @media (min-width: 769px) {
+    &:hover {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        left: 0;
+        bottom: calc(-40px + 0.5rem);
+        background: -webkit-linear-gradient(90deg, rgb(49, 211, 92), rgb(43, 183, 218));
+        background: -moz-linear-gradient(90deg, rgb(49, 211, 92), rgb(43, 183, 218));
+        background: linear-gradient(90deg, rgb(49, 211, 92), rgb(43, 183, 218));
+      }
+    }
+  }
+}

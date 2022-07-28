@@ -1,0 +1,40 @@
+.features {
+  margin-top: -10px;
+  @media (max-width: 768px) {
+    margin-top: 350px;
+  }
+}
+
+.title {
+  color: var(--DarkBlue);
+  font-size: 36px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.subTitle {
+  width: 65%;
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 140%;
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.cards {
+  margin-top: 75px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}

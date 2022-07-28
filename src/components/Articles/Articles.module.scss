@@ -1,0 +1,26 @@
+.art {
+  background-color: var(--VeryLightGray);
+  padding-top: 100px;
+}
+
+.title {
+  font-size: 35px;
+  color: var(--DarkBlue);
+  @media (max-width: 992px) {
+    text-align: center;
+  }
+}
+
+.articles {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
